@@ -1,0 +1,45 @@
+<html>
+  </head>
+    <title> Max Samohvalov Portfolio </title>
+  </head>
+
+  <body>
+  <script>
+
+// We'll also pass strings with special symbols, such as "2A3*3a2", "2A3 3a2", and "2_A3*3#A2".
+
+  function reverseString(str) {
+  var st = str.split("");
+  st = st.reverse();
+  st = st.join("");
+  return st;
+}
+
+function clearStr(str){
+  var clst = str.replace(/[^a-z0-9]/ig, '');
+  //console.log(clst);
+  return clst;
+
+}
+clearStr('2A3*3a2');
+
+  function palindrome(str) {
+    // Good luck!
+    cstr = clearStr(str).toLowerCase();
+    rstr = reverseString(cstr).toLowerCase();
+    console.log(rstr);
+    if (cstr === rstr ){
+      console.log("true");
+      return true;
+    }
+    return false;
+
+  }
+
+  palindrome("A man, a plan, a canal. Panama");
+  palindrome("2A3 3a2");
+  palindrome("2_A3*3#A2");
+
+</script>
+</body>
+</html>
